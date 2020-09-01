@@ -1,0 +1,145 @@
+@import"https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap";
+:root{
+    --color-blue : rgb(57, 182, 161);
+    --color-green : #50fa7b;
+    --color-white : white ;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    background: #282a36;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+header{
+    padding: 32px;
+    border-bottom: 1px solid #333;
+    background: rgba(0,0,0,0.1);
+}
+header div{
+    text-align: center;
+}
+.links a {
+    color: var(--color-white);
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 16px;
+    text-decoration: none;
+}
+.links a:hover{
+    color: var(--color-blue);
+    transition: color 300ms;
+}
+.links-social{
+    text-align: center;
+}
+.links-social a {
+    color: var(--color-white);
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 16px;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+.links-social a:hover{
+    color: var(--color-blue);
+    transition: color 300ms;
+}
+#wrapper {
+    color: var(--color-white);
+    text-align: center;
+    padding: 32px;
+}
+#wrapper img {
+    border-radius: 50%;
+    border: 5px solid var(--color-green);
+    margin-bottom: 32px;
+    height: 250px;
+}
+#wrapper h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+/*=== cards ===*/
+
+.cards {
+    max-width: 1300px; /* largura maxima */
+    margin: 0 auto; /* Alinha o card ao meio*/
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 100px; /*da um espaçamento entre as colunas(do grid)*/
+}
+
+.card-image img {
+    width: 100%; /* largura da imagem em relação ao pai. (cards) */
+    cursor: pointer; /* deixa o cursor em forma de mãozinha o passar por cima*/
+}
+.card-info {
+    color: black;
+}
+.card-info p{
+    margin-top: 2px;
+    background-color: rgba(109, 89, 197, 0.856);
+    padding: 2px ;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/*== MODAL ==*/
+
+.modal-overlay{
+    background-color: rgba(0,0,0,0.7);
+    width: 100%; /* Width = largura (Esticar na tela) */
+    height: 100%;/* height = Altura */
+    position: fixed;/*Posição fixa*/
+    top: 0;/* posição fixada no top 0 ou seja no topo da tela (em cima) */
+    opacity: 0;/* escondendo o .modal-overlay,só ativando quando clicado em algum dos cursos */
+    visibility: hidden;/* escondendo o botão "Close" tambem */
+}
+.modal {
+    background-color: var(--color-white);
+    width: 90%; /* Largura */
+    height: 90%; /* Altura */
+    margin: 5vh auto;/* margem do "modal". vh = Visão da altura,um espaçamento de 5px do topo e embaixo */
+    position: relative;
+}
+.modal .close-modal {/* Botão */
+    color: black;
+    position: absolute;/* posição Absoluta (na tela toda) em relação ao pai dele (.modal) */
+    right: 8px; /* posicionando na direita em relação ao .modal e dando um espaçamento de 8px da borda direita */
+    top: 5px;/* dando um espaçamento do topo de 5px */
+    cursor: pointer;/* Assim que passar o mouse no botão,o mouse vira uma mãozinha */
+}
+/*== MODAL ATIVO ==*/
+
+.modal-overlay.active {
+    opacity: 1;/* ativando o .modal-overlay assim que clicado em algum dos cursos */
+    visibility: visible;/* ativando o botão "Close assim que clicado em algum dos videos */
+}
+
+iframe {
+    width: 100%;/* Width = largura (Esticar na tela) */
+    height: 90%;/* height = Altura */
+    position: absolute;
+    top: 5%;
+}
+/* === VIDEO PAGE ===*/
+
+.video{
+    margin:0 auto;
+    max-width: 800px;
+}
+.card-video{
+    position: relative;
+    padding-top:55%;
+}
+.card-video iframe{
+    width: 100%;/* Width = largura (Esticar na tela) */
+    height: 90%;/* height = Altura */
+    position: absolute;
+    top: 0%;
+}
